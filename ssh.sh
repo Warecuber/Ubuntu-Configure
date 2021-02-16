@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "===== Configuring SSH ====="
-sudo rm /etc/ssh/sshd_config
+# sudo rm /etc/ssh/sshd_config
 echo "Include /etc/ssh/sshd_config.d/*.conf"\
 "\nPort 3300"\
 "\nLoginGraceTime 2m"\
@@ -22,7 +22,7 @@ echo "Include /etc/ssh/sshd_config.d/*.conf"\
 "\nAcceptEnv LANG LC_*"\
 "\nSubsystem sftp	/usr/lib/openssh/sftp-server" > sshd_config
 chmod 644 sshd_config
-sudo mv sshd_config /etc/ssh/sshd_config
-sudo service sshd restart
-sudo ufw allow 3300
+# sudo mv sshd_config /etc/ssh/sshd_config
+# sudo service sshd restart
+# sudo ufw allow 3300
 
