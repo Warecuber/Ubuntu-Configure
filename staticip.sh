@@ -18,6 +18,6 @@ echo "network:"\
 "\n      gateway4: $gatewayip"\
 "\n      nameservers:"\
 "\n        addresses: [$dnsIP]"\
-"\n  version: 2" >> 00-installer-config.yaml
-sudo mv 00-installer-config.yaml /etc/netplan/00-installer-config.yaml
-sudo netplan --debug apply
+"\n  version: 2" >> ./00-installer-config.yaml
+# sudo mv 00-installer-config.yaml /etc/netplan/00-installer-config.yaml
+# sudo netplan --debug apply
