@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "\nconfiguring a static IP"
 read -p "What shoud be the IP of the server? " serverip
 read -p "What is the IP of the gateway? " gatewayip
