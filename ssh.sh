@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "===== Configuring SSH ====="
 sudo rm /etc/ssh/sshd_config
 echo "Include /etc/ssh/sshd_config.d/*.conf"\
 "\nPort 3300"\
