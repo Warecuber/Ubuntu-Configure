@@ -10,14 +10,15 @@ then
 else
     dnsIP=$gatewayip
 fi
-echo "network:"\
-"\n  ethernets:"\
-"\n    ens160:"\
-"\n      dhcp4: no"\
-"\n      addresses: [$serverip/24]"\
-"\n      gateway4: $gatewayip"\
-"\n      nameservers:"\
-"\n        addresses: [$dnsIP]"\
-"\n  version: 2" >> ./00-installer-config.yaml
-sudo mv ./00-installer-config.yaml /etc/netplan/00-installer-config.yaml
-sudo netplan --debug apply
+touch ./00-installer-config.yaml
+echo "network:" >> ./00-installer-config.yaml
+echo "  ethernets:" >> ./00-installer-config.yaml
+echo "    ens160:" >> ./00-installer-config.yaml
+echo "      dhcp4: no" >> ./00-installer-config.yaml
+echo "      addresses: [$serverip/24]" >> ./00-installer-config.yaml
+echo "      gateway4: $gatewayip" >> ./00-installer-config.yaml
+echo "      nameservers:" >> ./00-installer-config.yaml
+echo "        addresses: [$dnsIP]" >> ./00-installer-config.yaml
+echo "  version: 2" >> ./00-installer-config.yaml
+# sudo mv ./00-installer-config.yaml /etc/netplan/00-installer-config.yaml
+# sudo netplan --debug apply
