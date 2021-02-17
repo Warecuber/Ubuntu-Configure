@@ -9,3 +9,7 @@ sudo usermod -aG sshuser $USER
 echo "===== Configuring SSH ====="
 sh ./ssh.sh
 sudo ufw enable
+mv ./update.sh ~/update.sh
+echo "===== Adding custom shortcuts ====="
+echo "alias update='sh ~/update.sh'" >> ~/.bashrc
+echo "Added update command
