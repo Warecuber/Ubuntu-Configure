@@ -8,7 +8,7 @@ echo "===== Creating SSH Group ====="
 sudo groupadd sshuser
 sudo usermod -aG sshuser $USER
 echo "===== Configuring SSH ====="
-bash ./ssh.sh
+./ssh.sh
 sudo ufw enable
 mv ./update.sh ~/update.sh
 echo "===== Adding custom shortcuts ====="
@@ -17,6 +17,6 @@ echo "Added update command to shell"
 read -n1 -p "Do you want to configure a static IP? y/n: " staticip
 if [[ $staticip == "y" || $staticip == "Y" ]]
 then
-    bash ./staticip.sh
+    ./staticip.sh
 fi
 echo "===== Done! ====="
