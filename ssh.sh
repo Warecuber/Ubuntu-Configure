@@ -3,7 +3,6 @@
 sudo rm /etc/ssh/sshd_config
 touch sshd_config
 echo "Include /etc/ssh/sshd_config.d/*.conf" >> sshd_config
-echo "Port 3300" >> sshd_config
 echo "LoginGraceTime 2m" >> sshd_config
 echo "PermitRootLogin prohibit-password" >> sshd_config
 echo "StrictModes yes" >> sshd_config
@@ -25,5 +24,3 @@ echo "Subsystem sftp	/usr/lib/openssh/sftp-server" >> sshd_config
 chmod 644 sshd_config
 sudo mv sshd_config /etc/ssh/sshd_config
 sudo service sshd restart
-sudo ufw allow 3300
-
